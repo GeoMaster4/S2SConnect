@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<body style="background-color:#5677be">
+    <div style="background-color:#5677be">
+        <center>
+            <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="item" style="background-color:#5677be">
+                        <img src="~/images/s2sBannerLarger.png" alt="Students 2 Seniors" class="img-responsive">
+                    </div>
+                </div>
+            </div>
+        </center>
+
+        <div class="row" style="width: 100%">
+            <div class="col-md-3"></div>
+            <center>
+                <div class="col-md-3">
+                    <a class="btn" asp-controller="Home" style="font-size:12px" asp-action="Login"><img src="~/images/s2sLoginCopyCopy.png" alt="Login"></a>
+                </div>
+            </center>
+            <center>
+                <div class="col-md-3">
+                    <a class="btn" style="font-size:12px" asp-controller="Home" asp-action="Register"><img src="~/images/s2sSignUpCopyCopy.png" alt="Register"></a>
+                </div>
+            </center>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,114 @@
+﻿@model ProfileModel
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Profile";
+}
+
+<div class="row" style="margin-top:30px">
+    <div class="col-md-6">
+        <p style="font-size:20px">Location</p>
+    </div>
+    <div class="col-md-6">
+        <div class="dropdown">
+            <textarea id="mytext"></textarea>
+
+            <select id="dropdown">
+                <option value="Seattle">Seattle</option>
+                <option value="Bellevue">Bellevue</option>
+                <option value="Kirkland">Kirkland</option>
+            </select>
+        </div>
+        <script type="text/javascript">
+            var mytextbox = document.getElementById('mytext');
+            var mydropdown = document.getElementById('dropdown');
+
+            mydropdown.onchange = function(){
+                mytextbox.value = this.value; //to appened
+                //mytextbox.innerHTML = this.value;
+            }
+        </script>
+    </div>
+</div>
+<div class="row" style="margin-top:30px">
+    <div class="col-md-6">
+        <p style="font-size:20px">Devices</p>
+    </div>
+    <div class="col-md-6">
+        <div class="dropdown">
+            <textarea id="mytext1"></textarea>
+
+            <select id="dropdown1">
+                <option value="iOS">iOS</option>
+                <option value="Windows">Windows</option>
+                <option value="OSX">OSX</option>
+            </select>
+        </div>
+        <script type="text/javascript">
+            var mytextbox1 = document.getElementById('mytext1');
+            var mydropdown1 = document.getElementById('dropdown1');
+
+            mydropdown1.onchange = function(){
+                mytextbox1.value = mydropdown1.value; //to appened
+                //mytextbox.innerHTML = this.value;
+            }
+        </script>
+    </div>
+</div>
+<div class="row" style="margin-top:30px">
+    <div class="col-md-6">
+        <p style="font-size:20px">Languages</p>
+    </div>
+    <div class="col-md-6">
+        <div class="dropdown">
+            <textarea id="mytext2"></textarea>
+
+            <select id="dropdown2">
+                <option value="English">English</option>
+                <option value="Chinese">Chinese</option>
+                <option value="Spanish">Spanish</option>
+                <option value="French">French</option>
+                <option value="Russia">Russia</option>
+            </select>
+        </div>
+        <script type="text/javascript">
+            var mytextbox2 = document.getElementById('mytext2');
+            var mydropdown2 = document.getElementById('dropdown2');
+
+            mydropdown2.onchange = function(){
+                mytextbox2.value = mydropdown2.value; //to appened
+                //mytextbox.innerHTML = this.value;
+            }
+        </script>
+    </div>
+</div>
+<div class="row" style="margin-top:30px">
+    <div class="col-md-6">
+        <p style="font-size:20px">Times</p>
+    </div>
+    <div class="col-md-6">
+        <div class="dropdown">
+            <textarea id="mytext3"></textarea>
+
+            <select id="dropdown3">
+                <option value="Morning">Morning</option>
+                <option value="Afternoon">Afternoon</option>
+            </select>
+        </div>
+        <script type="text/javascript">
+            var mytextbox3 = document.getElementById('mytext3');
+            var mydropdown3 = document.getElementById('dropdown3');
+
+            mydropdown3.onchange = function(){
+                mytextbox3.value = mydropdown3.value; //to appened
+                //mytextbox.innerHTML = this.value;
+            }
+        </script>
+    </div>
+</div>
+<center>
+    <div style="margin-top:30px"> 
+        <a class="btn btn-default" style="font-size:12px" asp-controller="Profile" asp-action="FindOrgs"><img src="~/images/Organization Label.png" alt="Find Orgs"></a>
+    </div>
+</center>
